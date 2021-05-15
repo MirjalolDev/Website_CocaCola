@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/stlyle.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img class="logo" src="./image/320621_preview.png" alt=""></a>
+            <div class="toggle" onclick="toggleMenu()"></div>
+            <ul class="navigation">
+                <li><a href="https://www.coca-cola.uz/uz/home">Home</a></li>
+                <li><a href="https://www.coca-cola.uz/uz/home">Menu</a></li>
+                <li><a href="https://www.coca-cola.uz/uz/home">What's New</a></li>
+                <li><a href="https://www.coca-cola.uz/uz/home">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Taste the Feeling</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     At quisquam aperiam tenetur aut similique tempore ratione, 
+                     pariatur nobis sed qui iusto maxime odit inventore ipsum dicta eaque! 
+                     Omnis consectetur sapiente voluptate commodi eaque aut beatae?
+                </p>
+                <a href="">Learn More</a>
+            </div>
+
+            <div class="imgBox">
+                 <!-- Swiper -->
+                <div class="swiper-container mySwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <img src="./image/170-1707035_fizzy-drinks-coca-cola-clip-free-library-coke.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./image/favpng_coca-cola-soft-drink-diet-coke.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./image/coca-cola-with-coffee-espresso-282x700.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./image/photo_2021-05-13_17-11-47 copy.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./image/favpng_coca-cola-fizzy-drinks-diet-coke-carbonated-water-orange-soft-drink.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./image/photo_2021-05-13_17-11-36 copy.png" />
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+          
+        </div>
+        <ul class="font-icon">
+            <li><a href="https://www.facebook.com/mirjalol.abduraxmonov.587"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.facebook.com/mirjalol.abduraxmonov.587"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/mirjalolbek757?r=nametag"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </section>
+
+
+     <!-- Swiper JS -->
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+      <!-- Initialize Swiper -->
+
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows: true,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+          },
+          loop: true,
+        });
+
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.toggle');
+            menuToggle.classList.toggle('active')
+            const navigation = document.querySelector('.navigation')
+            navigation.classList.toggle('active')
+            
+        };
+
+      </script>
+</body>
+</html>
